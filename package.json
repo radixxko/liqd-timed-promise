@@ -1,0 +1,21 @@
+{
+  "name": "liqd-timed-promise",
+  "version": "1.0.0",
+  "description": "Chainable Timed Promise",
+  "main": "lib/timed_promise.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/radixxko/liqd-timed-promise.git"
+  },
+  "keywords": [
+    "liqd",
+    "timed",
+    "promise"
+  ],
+  "author": "radixxko",
+  "license": "MIT",
+  "dependencies": {}
+}
