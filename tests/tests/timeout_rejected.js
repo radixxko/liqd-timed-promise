@@ -14,8 +14,8 @@ module.exports.test = ( Logger ) =>
   {
     Logger.log( 'TimedPromise catched' );
 
-    return err;
+    return 'Catched-'+err;
   });
 }
 
-module.exports.expects = 'Rejected';
+module.exports.expects = 'Catched-Rejected';

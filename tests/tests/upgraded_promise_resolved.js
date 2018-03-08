@@ -2,7 +2,7 @@ const TimedPromise = require( '../../lib/timed_promise' );
 
 module.exports.test = ( Logger ) =>
 {
-  let promise = new Promise( ( reject, resolve ) =>
+  let promise = new Promise( ( resolve, reject, timeout ) =>
   {
     Logger.log( 'Promise created' );
 
@@ -19,7 +19,7 @@ module.exports.test = ( Logger ) =>
   {
     Logger.log( 'TimedPromise catched' );
 
-    return err;
+    return 'Catched-'+err;
   });
 }
 
