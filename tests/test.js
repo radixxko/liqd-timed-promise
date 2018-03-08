@@ -17,7 +17,7 @@ fs.readdir( __dirname + '/tests', async( err, files ) =>
 
     for( let file of files )
     {
-      //if( file !== 'timeout_timeouted.js' ){ continue; }
+      //if( file === 'upgraded_promise_timeouted.js' ){ continue; }
 
       let logger = new Logger( file );
       let test = require( __dirname + '/tests/' + file );

@@ -1,6 +1,6 @@
 {
   "name": "liqd-timed-promise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Chainable Timed Promise",
   "main": "lib/timed_promise.js",
   "scripts": {
