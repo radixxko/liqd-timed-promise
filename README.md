@@ -5,12 +5,21 @@
 
 ## Sneak Peek
 
+1) Converting standard Fetch Promise to TimedPromise with the 3s timeout
+```js
+let data = await new TimedPromise( fetch('http://example.com/movies.json') )
+	.then( response => response.json() )
+	.then( json => { return { ok: true, json } })
+	.timeout( 3000, { ok: false, error: 'fetch-timeouted' })
+	.catch( error => { return { ok: false, error } });
+```
+2) Creating new TimedPromise with the 3s timeout
 ```js
 let data = await new TimedPromise( ( resolve, reject, timeout ) =>
 {
   console.log( `Fetch timeout set to ${timeout}ms` );
 
-  fetch('http://example.com/data.json')
+  fetch('http://example.com/movies.json')
     .then( response => response.json() )
     .then( json => resolve({ ok: true, json }) )
     .catch( error => reject({ ok: false, error }) );
