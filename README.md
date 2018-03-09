@@ -1,7 +1,9 @@
 # TimedPromise: Node.js class extending standard JavaScript Promises
 
 [![Version npm](https://img.shields.io/npm/v/liqd-timed-promise.svg)](https://www.npmjs.com/package/liqd-timed-promise)
+[![Build Status](https://travis-ci.org/radixxko/liqd-timed-promise.svg?branch=master)](https://travis-ci.org/radixxko/liqd-timed-promise)
 [![Coverage Status](https://coveralls.io/repos/github/radixxko/liqd-timed-promise/badge.svg?branch=master)](https://coveralls.io/github/radixxko/liqd-timed-promise?branch=master)
+[![Dependency Status](https://beta.gemnasium.com/badges/github.com/radixxko/liqd-timed-promise.svg)](https://beta.gemnasium.com/projects/github.com/radixxko/liqd-timed-promise)
 
 ## Sneak Peek
 
