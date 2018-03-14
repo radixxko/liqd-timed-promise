@@ -2,6 +2,11 @@
 
 const fs = require('fs');
 
+function parameterUsed( param )
+{
+  return ( process.env.npm_config_argv && process.env.npm_config_argv.includes('"--'+param+'"') );
+}
+
 process.on( 'unhandledRejection', ( rejection ) =>
 {
   //console.log( 'unhandledRejection', rejection, '\n'+(new Error()).stack.split(/\s*\n\s*/).filter( ( l, i ) => i > 1 && l ).join('\n') );
@@ -19,7 +24,8 @@ fs.readdir( __dirname + '/tests', async( err, files ) =>
 
     for( let file of files )
     {
-      //if( file !== 'upgraded_promise_timeouted.js' ){ continue; }
+      //if( file !== 'chaining_timeouted_catched_by_parent.js' ){ continue; }
+      if( file === 'chaining_timeouted_catched_by_parent.js' ){ continue; }
 
       let logger = new Logger( file );
       let test = require( __dirname + '/tests/' + file );
@@ -44,13 +50,18 @@ fs.readdir( __dirname + '/tests', async( err, files ) =>
       {
         console.log( '\x1b[42m\x1b[30m OK  ✓ \x1b[0m \x1b[32mTest "' + tests[i].name + '" successful\x1b[0m' );
 
+        if( parameterUsed( 'debug' ) )
+        {
+          tests[i].logger.dump();
+        }
+
         ++status.successful;
       }
       else
       {
         console.log( '\x1b[41m\x1b[30m ERROR \x1b[0m \x1b[31mTest "' + tests[i].name + '" failed\x1b[0m' );
-        console.log( '\x1b[31m        Expects : ' + ( tests[i].expects || tests[i].expects.toString() ) + '\x1b[0m' );
-        console.log( '\x1b[31m        Result  : ' + ( results[i] || results[i].toString() ) + '\x1b[0m' );
+        console.log( '\x1b[31m        Expects : ' + ( tests[i].expects ? tests[i].expects.toString() : tests[i].expects ) + '\x1b[0m' );
+        console.log( '\x1b[31m        Result  : ' + ( results[i] ? results[i].toString() : results[i] ) + '\x1b[0m' );
 
         tests[i].logger.dump();
 
@@ -58,7 +69,7 @@ fs.readdir( __dirname + '/tests', async( err, files ) =>
       }
     }
 
-    await new Promise( resolve => setTimeout( resolve, 5000 ) );
+    //await new Promise( resolve => setTimeout( resolve, 5000 ) );
 
     if( !status.failed )
     {
