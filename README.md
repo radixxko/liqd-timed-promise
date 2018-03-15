@@ -1,4 +1,4 @@
-# TimedPromise: ECMAScript 6+ class extending standard JavaScript Promises
+# TimedPromise: ECMAScript 6+ class extending standard JavaScript Promises with timeout functionality
 
 [![Version npm](https://img.shields.io/npm/v/liqd-timed-promise.svg)](https://www.npmjs.com/package/liqd-timed-promise)
 [![Build Status](https://travis-ci.org/radixxko/liqd-timed-promise.svg?branch=master)](https://travis-ci.org/radixxko/liqd-timed-promise)
@@ -46,6 +46,10 @@ Standard JavaScript [`Promises`](https://developer.mozilla.org/en-US/docs/Web/Ja
 
 ```
 npm install --save liqd-timed-promise
+```
+or include script for a browser release
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/radixxko/liqd-timed-promise/dist/timed_promise.min.js"></script>
 ```
 
 ## Class: TimedPromise extends Promise

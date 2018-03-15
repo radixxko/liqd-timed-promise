@@ -70,7 +70,7 @@
         }
         else
         {
-          ( typeof process !== 'undefined' && process.nextTick ? process.nextTick : setTimeout )( () =>
+          setTimeout( () =>
           {
             executor( timed_promise.resolve, timed_promise.reject, this.remaining() )
           }, 0);
@@ -120,7 +120,7 @@
 
     elapsed()
     {
-      let elapsed = (new Date()).getTime() - this._timed_promise.created;
+      return (new Date()).getTime() - this._timed_promise.created;
     }
 
     remaining()
@@ -145,10 +145,7 @@
         ( !onRejected || isNativePromiseExecutor( onRejected ) ) ? onRejected : ( reason ) => onRejected( reason, this.remaining() )
       );
 
-      if( then_promise._timed_promise )
-      {
-        then_promise._timed_promise.parent = this;
-      }
+      then_promise._timed_promise.parent = this;
 
       return then_promise;
     }
@@ -159,10 +156,7 @@
         ( !onRejected || isNativePromiseExecutor( onRejected ) ) ? onRejected : ( reason ) => onRejected( reason, this.remaining() )
       );
 
-      if( catch_promise._timed_promise )
-      {
-        catch_promise._timed_promise.parent = this;
-      }
+      catch_promise._timed_promise.parent = this;
 
       return catch_promise;
     }
