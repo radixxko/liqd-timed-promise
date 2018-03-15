@@ -1,12 +1,12 @@
 {
   "name": "liqd-timed-promise",
   "description": "Chainable Promises with timeouts",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "radixxko",
   "license": "MIT",
-  "main": "./lib/timed_promise.js",
+  "main": "lib/timed_promise.js",
   "files": [
-    "./lib/"
+    "lib/"
   ],
   "scripts": {
     "test": "node tests/test.js"

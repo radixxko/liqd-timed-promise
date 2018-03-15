@@ -34,7 +34,7 @@ let data = await new TimedPromise( ( resolve, reject, timeout ) =>
 
 ## Motivation
 
-Standard JavaScript [`Promises`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) does not provide any support for timeouts - failing the Promise once the timer is elapsed. There are many solutions how to simulate such functionality - for example creating new Promise with the reject callback triggered by the [`setTimeout`](https://developer.mozilla.org/ro/docs/Web/API/window.setTimeout) function or using [`Promise.race()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race) method for the original Promise and a new Promise resolved by the [`setTimeout`](https://developer.mozilla.org/ro/docs/Web/API/window.setTimeout) function.
+Standard JavaScript [`Promises`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) does not provide any support for timeouts - failing the Promise once the timer is elapsed. There are many solutions how to simulate such functionality - for example creating new Promise with the reject callback triggered by the [`setTimeout`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) function or using [`Promise.race()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race) method for the original Promise and a new Promise resolved by the [`setTimeout`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) function.
 
 ## Table of Contents
 
