@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="dist/timed_promise.min.js"></script>
+    <script type="text/javascript">
+      ( async() =>
+      {
+        let test = await new TimedPromise( ( resolve, reject, timeout ) => { resolve(52) } );
+
+        console.log( test );
+      })();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
