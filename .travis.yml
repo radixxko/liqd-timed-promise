@@ -3,9 +3,6 @@ node_js:
   - "node"
   - "9"
   - "8"
-  - "6"
-  - "5"
-  - "4"
 script:
   - npm test
 after_success:
