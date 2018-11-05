@@ -76,8 +76,5 @@ it( 'TimedPromise should be catchable by parent', async() =>
   .timeout( 1000, 'timeout', true )
   .catch( e => e );
 
-  // TODO needs to implemented
-  //assert.deepStrictEqual( result, 'Catched-by-parent-timeout', 'Invalid TimedPromise rejection' );
-
-  assert.deepStrictEqual( result, 'timeout', 'Invalid TimedPromise rejection' );
+  assert.deepStrictEqual( result, 'Catched-by-parent-timeout', 'Invalid TimedPromise rejection' );
 });

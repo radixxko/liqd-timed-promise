@@ -1,8 +1,11 @@
 # TimedPromise: ECMAScript 6+ class extending standard JavaScript Promises with timeout functionality
 
-[![Version npm](https://img.shields.io/npm/v/liqd-timed-promise.svg)](https://www.npmjs.com/package/liqd-timed-promise)
+[![NPM version](https://img.shields.io/npm/v/liqd-timed-promise.svg)](https://www.npmjs.com/package/liqd-timed-promise)
 [![Build Status](https://travis-ci.org/radixxko/liqd-timed-promise.svg?branch=master)](https://travis-ci.org/radixxko/liqd-timed-promise)
 [![Coverage Status](https://coveralls.io/repos/github/radixxko/liqd-timed-promise/badge.svg?branch=master)](https://coveralls.io/github/radixxko/liqd-timed-promise?branch=master)
+[![NPM downloads](https://img.shields.io/npm/dm/liqd-timed-promise.svg)](https://www.npmjs.com/package/liqd-timed-promise)
+[![Known Vulnerabilities](https://snyk.io/test/github/radixxko/liqd-timed-promise/badge.svg?targetFile=package.json)](https://snyk.io/test/github/radixxko/liqd-timed-promise?targetFile=package.json)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## Sneak Peek
 
