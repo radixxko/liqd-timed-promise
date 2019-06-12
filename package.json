@@ -1,7 +1,7 @@
 {
   "name": "liqd-timed-promise",
   "description": "Chainable Promises with timeouts",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "author": "radixxko",
   "license": "MIT",
   "main": "lib/timed_promise.js",
@@ -24,8 +24,8 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "coveralls": "^3.0.2",
+    "coveralls": "^3.0.4",
     "mocha": "^5.2.0",
-    "nyc": "^11.9.0"
+    "nyc": "^14.1.1"
   }
 }
